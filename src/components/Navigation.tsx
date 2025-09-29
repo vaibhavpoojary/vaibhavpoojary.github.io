@@ -46,7 +46,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full bg-card/80 backdrop-blur-md border-b border-border z-50 transition-smooth">
       <div className="container mx-auto px-4 lg:px-6 flex items-center justify-between h-16">
-        <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+        <div className="text-xl font-bold text-foreground">
           Vaibhava Poojary
         </div>
 

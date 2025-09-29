@@ -44,7 +44,7 @@ const HeroSection = () => {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Hi, I'm{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-primary">
               Vaibhava Poojary
             </span>
           </h1>

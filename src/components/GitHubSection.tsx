@@ -126,7 +126,7 @@ const GitHubSection = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3">
             <Github className="h-12 w-12 text-primary" />
-            Personal <span className="bg-gradient-primary bg-clip-text text-transparent">Projects</span>
+            Personal <span className="text-primary">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Open-source contributions and personal AI/ML projects showcasing innovation and technical expertise

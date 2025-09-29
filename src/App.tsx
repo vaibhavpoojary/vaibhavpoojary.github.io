@@ -11,9 +11,9 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <Toaster />
+      <BrowserRouter basename="/vaibhavpoojary.github.io">
         <Routes>
           <Route path="/" element={<Portfolio />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

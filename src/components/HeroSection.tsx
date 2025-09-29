@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
-import heroAvatar from "@/assets/hero-avatar.png";
+import vaibhavaPhoto from "@/assets/vaibhava-photo.png";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -31,9 +31,9 @@ const HeroSection = () => {
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <img 
-                src={heroAvatar} 
+                src={vaibhavaPhoto} 
                 alt="Vaibhava Poojary - AI/ML Engineer"
-                className="w-48 h-48 rounded-full shadow-elegant animate-pulse-glow"
+                className="w-48 h-48 rounded-full object-cover shadow-elegant animate-pulse-glow"
               />
               <div className="absolute -bottom-2 -right-2 animate-wave">
                 <span className="text-4xl">👋</span>

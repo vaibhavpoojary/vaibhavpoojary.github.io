@@ -10,4 +10,10 @@ export default defineConfig({
     },
   },
   base: "/vaibhavpoojary.github.io/",
+  build: {
+    rollupOptions: {
+      // Ensure proper module resolution
+      preserveEntrySignatures: "strict",
+    },
+  },
 });

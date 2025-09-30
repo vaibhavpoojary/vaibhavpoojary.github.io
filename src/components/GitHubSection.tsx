@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Star, GitFork, Eye, Filter } from "lucide-react";
+import { Github, ExternalLink, Filter } from "lucide-react";
 
 interface GitHubProject {
   name: string;
@@ -122,14 +122,14 @@ const GitHubSection = () => {
 
   return (
     <section id="github" className="py-20">
-      <div className="container mx-auto px-4 lg:px-6">
+      <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1200px)]">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3">
-            <Github className="h-12 w-12 text-primary" />
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 flex flex-wrap items-center justify-center gap-3">
+            <Github className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />
             Personal <span className="text-primary">Projects</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Open-source contributions and personal AI/ML projects showcasing innovation and technical expertise
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Open-source contributions and personal AI/ML projects showcasing innovation
           </p>
         </div>
 
@@ -160,22 +160,6 @@ const GitHubSection = () => {
                   <Badge variant="outline" className="text-xs">
                     {project.category}
                   </Badge>
-                </div>
-                
-                {/* GitHub Stats */}
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Star className="h-3 w-3" />
-                    {project.stars || 0}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <GitFork className="h-3 w-3" />
-                    {project.forks || 0}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Eye className="h-3 w-3" />
-                    <span className="text-xs">View</span>
-                  </div>
                 </div>
               </CardHeader>
               

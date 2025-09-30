@@ -105,13 +105,13 @@ const Portfolio = () => {
       <FloatingContactButton />
       
       {/* Footer */}
-      <footer className="py-8 border-t border-border bg-card/50">
-        <div className="container mx-auto px-4 lg:px-6 text-center">
-          <p className="text-muted-foreground text-sm">
+      <footer className="py-6 sm:py-8 border-t border-border bg-card/50">
+        <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1200px)] text-center">
+          <p className="text-muted-foreground text-xs sm:text-sm">
             © 2024 Vaibhava Poojary. All rights reserved. | 
             <span className="text-primary font-medium"> AI/ML & Generative AI Engineer</span>
           </p>
-          <p className="text-xs text-muted-foreground mt-2">
+          <p className="text-[10px] sm:text-xs text-muted-foreground mt-2">
             Built with React, TypeScript, Tailwind CSS, and lots of ☕
           </p>
         </div>

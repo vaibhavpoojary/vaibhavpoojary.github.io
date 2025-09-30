@@ -25,7 +25,7 @@ const HeroSection = () => {
         <div className="absolute top-1/6 right-1/6 w-1 h-1 bg-accent rounded-full animate-float opacity-50" style={{animationDelay: "2.5s"}}></div>
       </div>
 
-      <div className="container mx-auto px-4 lg:px-6 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1200px)] text-center relative z-10">
         <div className="animate-fade-in">
           {/* Avatar */}
           <div className="mb-8 flex justify-center">
@@ -33,7 +33,7 @@ const HeroSection = () => {
               <img 
                 src={vaibhavaPhoto} 
                 alt="Vaibhava Poojary - AI/ML Engineer"
-                className="w-48 h-48 rounded-full object-cover shadow-elegant animate-pulse-glow"
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover shadow-elegant animate-pulse-glow"
               />
               <div className="absolute -bottom-2 -right-2 animate-wave">
                 <span className="text-4xl">👋</span>
@@ -110,7 +110,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+        <div className="absolute right-4 bottom-6 sm:right-8 sm:bottom-8 animate-float">
           <ChevronDown 
             className="h-8 w-8 text-muted-foreground cursor-pointer hover:text-primary transition-smooth"
             onClick={() => scrollToSection("about")}

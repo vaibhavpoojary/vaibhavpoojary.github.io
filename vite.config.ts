@@ -4,6 +4,9 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    port: 8080
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -12,7 +15,6 @@ export default defineConfig({
   base: "/vaibhavpoojary.github.io/",
   build: {
     rollupOptions: {
-      // Ensure proper module resolution
       preserveEntrySignatures: "strict",
     },
   },

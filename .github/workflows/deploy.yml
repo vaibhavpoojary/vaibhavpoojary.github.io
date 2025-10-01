@@ -29,8 +29,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Determine base path for GitHub Pages
+        shell: bash
+        run: |
+          if [[ "${{ github.event.repository.name }}" == *.github.io ]]; then
+            echo "BASE_PATH=/" >> $GITHUB_ENV
+          else
+            echo "BASE_PATH=/${{ github.event.repository.name }}/" >> $GITHUB_ENV
+          fi
+
       - name: Build project
-        run: npm run build
+        run: npm run build -- --base="${{ env.BASE_PATH }}"
 
       - name: Add SPA fallback (404.html)
         run: cp dist/index.html dist/404.html

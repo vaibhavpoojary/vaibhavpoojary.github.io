@@ -12,7 +12,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/vaibhavpoojary.github.io/",
+  base: "/",
   build: {
     rollupOptions: {
       preserveEntrySignatures: "strict",

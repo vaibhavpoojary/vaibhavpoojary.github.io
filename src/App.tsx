@@ -13,7 +13,7 @@ const App = () => (
     <TooltipProvider>
       <Sonner />
       <Toaster />
-      <BrowserRouter basename="/vaibhavpoojary.github.io">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Portfolio />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -83,6 +83,22 @@ const GitHubSection = () => {
       highlights: ["Real-time monitoring", "Performance analytics", "Multi-model evaluation"],
       category: "AI Services",
       githubUrl: "https://github.com/vaibhavpoojary/agent-llm-evaluation-dashboard"
+    },
+    {
+      name: "NLP-Chatbot",
+      description: "Enterprise-grade conversational AI chatbot for automating customer support queries, trained on domain-specific datasets with serverless deployment capabilities",
+      tech: ["Python", "Transformers", "Flask", "AWS Lambda"],
+      highlights: ["Domain-specific training", "Fast response times", "Serverless architecture"],
+      category: "AI Services",
+      githubUrl: "https://github.com/vaibhavpoojary/NLP-Chatbot"
+    },
+    {
+      name: "RAG-Query-Generator",
+      description: "Natural language to SQL converter using RAG techniques and embeddings for semantic understanding of complex database queries with AWS Bedrock integration",
+      tech: ["Python", "LangChain", "AWS Bedrock", "Titan Embeddings"],
+      highlights: ["Semantic SQL generation", "Large-scale data queries", "RAG-powered understanding"],
+      category: "AI Services",
+      githubUrl: "https://github.com/vaibhavpoojary/RAG-Query-Generator"
     }
   ];
 

@@ -29,14 +29,6 @@ const GitHubSection = () => {
       githubUrl: "https://github.com/vaibhavpoojary/prompt-optimiser-service"
     },
     {
-      name: "Agent Builder Service",
-      description: "Comprehensive agent development platform supporting AWS Bedrock Agent core, LangGraph orchestration, MLFlow integration, and advanced agent evaluation frameworks",
-      tech: ["Python", "AWS Bedrock", "LangGraph", "MLFlow"],
-      highlights: ["Multi-agent framework support", "Built-in evaluation tools", "Production-ready deployment"],
-      category: "AI Services",
-      githubUrl: "https://github.com/vaibhavpoojary/agent-builder-service"
-    },
-    {
       name: "Live Image Detection with VGG-16",
       description: "Real-time image detection system leveraging VGG-16 architecture for accurate object recognition and classification with live streaming capabilities",
       tech: ["Python", "PyTorch", "VGG-16", "OpenCV"],

@@ -60,6 +60,13 @@ const ProjectsSection = () => {
       impact: "400+ agents orchestrated",
       tech: ["LangGraph", "A2A Protocol", "Multi-Agent", "Orchestration"],
       category: "Enterprise AI"
+    },
+    {
+      title: "Capgemini – Agent Builder Service",
+      description: "Comprehensive agent development platform supporting AWS Bedrock Agent core, LangGraph orchestration, MLFlow integration, and advanced agent evaluation frameworks.",
+      impact: "Unified agent development platform",
+      tech: ["AWS Bedrock", "LangGraph", "MLFlow", "Agent Framework"],
+      category: "Platform Architecture"
     }
   ];
 

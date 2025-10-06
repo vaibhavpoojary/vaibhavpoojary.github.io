@@ -18,103 +18,75 @@ interface GitHubProject {
 const GitHubSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Mock data for personal projects (in real implementation, you'd fetch from GitHub API)
+  // Personal GitHub projects
   const projects: GitHubProject[] = [
     {
-      name: "AgentCore",
-      description: "Modular framework for building and deploying agent-based AI systems, supporting multi-agent orchestration, enterprise-scale deployment, and seamless integration of various AI models",
-      tech: ["Python", "LangChain", "AWS Lambda", "Docker"],
-      highlights: ["Multi-agent orchestration", "Scalable deployment", "Enterprise AI integration"],
-      stars: 156,
-      forks: 34,
-      category: "AI/ML",
-      githubUrl: "https://github.com/vaibhavpoojary/AgentCore"
+      name: "Prompt Optimiser Service",
+      description: "Enterprise-grade prompt optimization service compatible with AWS Bedrock and Azure OpenAI, providing intelligent prompt engineering and refinement capabilities",
+      tech: ["Python", "AWS Bedrock", "Azure OpenAI", "FastAPI"],
+      highlights: ["Multi-cloud support", "Automated prompt optimization", "Enterprise-scale deployment"],
+      category: "AI Services",
+      githubUrl: "https://github.com/vaibhavpoojary/prompt-optimiser-service"
     },
     {
-      name: "LangGraph",
-      description: "Graph-based framework for building complex AI workflows with efficient task management and dynamic pipeline orchestration",
-      tech: ["Python", "LangChain", "NetworkX", "AWS Step Functions"],
-      highlights: ["Real-time workflow processing", "AWS integration", "Dynamic AI pipelines"],
-      stars: 203,
-      forks: 67,
-      category: "AI/ML",
-      githubUrl: "https://github.com/vaibhavpoojary/LangGraph"
+      name: "Agent Builder Service",
+      description: "Comprehensive agent development platform supporting AWS Bedrock Agent core, LangGraph orchestration, MLFlow integration, and advanced agent evaluation frameworks",
+      tech: ["Python", "AWS Bedrock", "LangGraph", "MLFlow"],
+      highlights: ["Multi-agent framework support", "Built-in evaluation tools", "Production-ready deployment"],
+      category: "AI Services",
+      githubUrl: "https://github.com/vaibhavpoojary/agent-builder-service"
     },
     {
-      name: "RAG-Query-Generator",
-      description: "Converts natural language to SQL using embeddings and RAG techniques for semantic understanding of complex database queries",
-      tech: ["Python", "LangChain", "AWS Bedrock", "Titan Embeddings"],
-      highlights: ["Reduces manual query writing", "Supports large-scale data queries", "Semantic SQL generation"],
-      stars: 89,
-      forks: 23,
-      category: "Generative AI"
+      name: "Live Image Detection with VGG-16",
+      description: "Real-time image detection system leveraging VGG-16 architecture for accurate object recognition and classification with live streaming capabilities",
+      tech: ["Python", "PyTorch", "VGG-16", "OpenCV"],
+      highlights: ["Real-time processing", "High accuracy detection", "Optimized inference"],
+      category: "Computer Vision",
+      githubUrl: "https://github.com/vaibhavpoojary/live-image-detection-vgg16"
     },
     {
-      name: "NLP-Chatbot",
-      description: "Conversational AI for automating customer support queries, trained on domain-specific datasets, deployable serverless",
-      tech: ["Python", "Transformers", "Flask", "AWS Lambda"],
-      highlights: ["Fast response times", "Enterprise support integration", "Domain-specific training"],
-      stars: 124,
-      forks: 41,
-      category: "AI/ML"
+      name: "Llama 3.2 Fine-tuning QLoRA & PEFT",
+      description: "Advanced fine-tuning implementation of Llama 3.2 using QLoRA and PEFT techniques on AWS SageMaker and NVIDIA RTX A1000 Fury G09 for efficient model adaptation",
+      tech: ["Python", "Llama 3.2", "QLoRA", "PEFT", "SageMaker"],
+      highlights: ["Memory-efficient training", "Multi-platform deployment", "Parameter-efficient fine-tuning"],
+      category: "Model Fine-tuning",
+      githubUrl: "https://github.com/vaibhavpoojary/llama3.2-finetuning"
     },
     {
-      name: "SQL-Query-Optimizer",
-      description: "Analyzes and optimizes SQL queries for performance improvement with intelligent recommendations",
-      tech: ["Python", "SQLAlchemy", "Pandas"],
-      highlights: ["Detects inefficiencies", "Suggests optimizations", "Multi-DB support"],
-      stars: 76,
-      forks: 18,
-      category: "Tools"
+      name: "Microsoft Phi-2 Fine-tuning LoRA & PEFT",
+      description: "Optimized fine-tuning pipeline for Microsoft Phi-2 model using LoRA and PEFT on AWS SageMaker and NVIDIA RTX A1000 Fury G09 for domain-specific adaptation",
+      tech: ["Python", "Microsoft Phi-2", "LoRA", "PEFT", "SageMaker"],
+      highlights: ["Low-rank adaptation", "Efficient parameter tuning", "Production-ready models"],
+      category: "Model Fine-tuning",
+      githubUrl: "https://github.com/vaibhavpoojary/phi2-finetuning"
     },
     {
-      name: "Image-Classification-Model",
-      description: "CNN-based image classifier with data augmentation techniques for benchmark datasets",
-      tech: ["Python", "PyTorch", "OpenCV"],
-      highlights: ["High accuracy", "Adaptable architecture", "Multiple classification tasks"],
-      stars: 62,
-      forks: 15,
-      category: "AI/ML"
+      name: "Refined React.js ChatBot UI Templates",
+      description: "Collection of production-ready, fully customizable chatbot UI templates built with React.js and developed on Lovable, available freely for various AI assistant use cases",
+      tech: ["React.js", "TypeScript", "Tailwind CSS", "Lovable"],
+      highlights: ["Multiple UI variants", "Responsive design", "Easy integration"],
+      category: "Web Applications",
+      githubUrl: "https://github.com/vaibhavpoojary/chatbot-ui-templates"
     },
     {
-      name: "Data-Pipeline-Automation",
-      description: "Automated ETL pipelines for data ingestion, transformation, and loading into centralized storage systems",
-      tech: ["Python", "AWS Glue", "S3", "SQL"],
-      highlights: ["Ensures data consistency", "Scalable for large datasets", "Automated scheduling"],
-      stars: 45,
-      forks: 12,
-      category: "Data Pipelines"
+      name: "Property Selling Web App",
+      description: "Full-stack property marketplace application featuring AI-powered agent for intelligent property recommendations, built with React.js, Tailwind CSS, Python, and FastAPI",
+      tech: ["React.js", "Tailwind CSS", "Python", "FastAPI", "AI Agent"],
+      highlights: ["AI-powered recommendations", "Modern UI/UX", "Full-stack architecture"],
+      category: "Web Applications",
+      githubUrl: "https://github.com/vaibhavpoojary/property-selling-app"
     },
     {
-      name: "Model-Evaluation-Framework",
-      description: "Comprehensive framework for evaluating ML models using multiple metrics with detailed visualization",
-      tech: ["Python", "Scikit-learn", "Matplotlib"],
-      highlights: ["Model comparison", "Visual performance insights", "Multiple evaluation metrics"],
-      stars: 38,
-      forks: 9,
-      category: "Tools"
-    },
-    {
-      name: "CI-CD-Pipeline-Setup",
-      description: "CI/CD pipeline for automated ML model testing and deployment with version control integration",
-      tech: ["Python", "GitHub Actions", "Docker"],
-      highlights: ["Reliable deployments", "Version control integration", "Automated testing"],
-      stars: 52,
-      forks: 14,
-      category: "Tools"
-    },
-    {
-      name: "AWS-Resource-Optimization",
-      description: "Tool for analyzing AWS resource usage and suggesting optimizations for cost and efficiency improvements",
-      tech: ["Python", "Boto3", "AWS Cost Explorer"],
-      highlights: ["Identifies underutilized resources", "Cost-saving strategies", "Resource monitoring"],
-      stars: 71,
-      forks: 19,
-      category: "Tools"
+      name: "Agent and LLM Evaluation Dashboard",
+      description: "Comprehensive analytics and evaluation dashboard for monitoring AI agent performance and LLM metrics with real-time insights and detailed performance tracking",
+      tech: ["React.js", "Python", "FastAPI", "MLFlow"],
+      highlights: ["Real-time monitoring", "Performance analytics", "Multi-model evaluation"],
+      category: "AI Services",
+      githubUrl: "https://github.com/vaibhavpoojary/agent-llm-evaluation-dashboard"
     }
   ];
 
-  const categories = ["All", "AI/ML", "Generative AI", "Data Pipelines", "Tools"];
+  const categories = ["All", "AI Services", "Computer Vision", "Model Fine-tuning", "Web Applications"];
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 

@@ -8,7 +8,7 @@ const ExperienceSection = () => {
       company: "Capgemini",
       role: "Senior AI/ML Engineer",
       period: "May 2022 – Present",
-      location: "Mumbai, India",
+      location: "Bangalore, India",
       achievements: [
         {
           title: "RAISE™ GenAI Platform",
@@ -52,7 +52,7 @@ const ExperienceSection = () => {
       company: "Tech Mahindra", 
       role: "AI/ML Engineer",
       period: "Dec 2019 – May 2022",
-      location: "Pune, India",
+      location: "Bangalore, India",
       achievements: [
         {
           title: "NLP Chatbot for Customer Support",

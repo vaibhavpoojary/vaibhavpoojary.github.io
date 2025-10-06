@@ -54,10 +54,7 @@ const Navigation = () => {
     setIsOpen(false);
   };
   return <nav className="fixed top-0 w-full bg-card/80 backdrop-blur-md border-b border-border z-50 transition-smooth">
-      <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1200px)] flex items-center justify-between h-16">
-        <div className="text-xl font-bold text-foreground">
-      </div>
-
+      <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1200px)] flex items-center justify-center h-16">
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1">
           {navItems.map(item => <Button key={item.id} variant={activeSection === item.id ? "default" : "ghost"} onClick={() => scrollToSection(item.id)} className={`transition-smooth ${activeSection === item.id ? "shadow-glow-primary" : "hover:shadow-glow-accent"}`}>

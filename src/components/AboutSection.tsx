@@ -8,14 +8,14 @@ const AboutSection = () => {
       company: "Capgemini",
       period: "May 2022 – Present",
       role: "Senior AI/ML Engineer",
-      location: "Mumbai, India",
+      location: "Bangalore, India",
       description: "Leading enterprise GenAI initiatives and building production-scale LLM solutions"
     },
     {
       company: "Tech Mahindra",
       period: "Dec 2019 – May 2022",
       role: "AI/ML Engineer", 
-      location: "Pune, India",
+      location: "Bangalore, India",
       description: "Developed NLP solutions and automated data processing pipelines"
     }
   ];

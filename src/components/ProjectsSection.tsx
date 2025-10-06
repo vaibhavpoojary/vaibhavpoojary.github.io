@@ -34,15 +34,36 @@ const ProjectsSection = () => {
       category: "Platform Architecture"
     },
     {
-      title: "Fine-Tuning & Custom Model Development",
-      description: "Implemented advanced fine-tuning pipelines using LoRA/QLoRA/PEFT for domain-specific model adaptation.",
-      impact: "5K+ monthly queries",
-      tech: ["LoRA", "QLoRA", "PEFT", "Phi-2", "Llama 3"],
-      category: "Model Development"
+      title: "Capgemini – Agentic AI Workflow Manager for AWS Glue Recovery",
+      description: "Orchestrated intelligent workflow automation using LangGraph, Claude 3.5, and GPT-4.1 for automated AWS Glue pipeline recovery.",
+      impact: "80% faster recovery",
+      tech: ["LangGraph", "Claude 3.5", "GPT-4.1", "AWS Glue"],
+      category: "Enterprise AI"
+    },
+    {
+      title: "Capgemini – ServiceNow Agentic AI Solution for L1 Agents",
+      description: "Developed multi-agent orchestration using LangGraph to automate L1 ticket resolution and routing.",
+      impact: "60% workforce reduction, 80% efficiency gain",
+      tech: ["LangGraph", "ServiceNow", "Multi-Agent", "Automation"],
+      category: "Intelligent Automation"
+    },
+    {
+      title: "Capgemini – Prompt Optimizer Service",
+      description: "Built intelligent prompt optimization service for AWS Bedrock and Azure using GPT-4.1 and Claude 3.5 for enhanced LLM performance.",
+      impact: "40% better response quality",
+      tech: ["AWS Bedrock", "Azure", "GPT-4.1", "Claude 3.5"],
+      category: "Platform Architecture"
+    },
+    {
+      title: "Capgemini – A2A Agent Protocol with LangGraph",
+      description: "Orchestrated 400+ AI agents using Agent-to-Agent protocol and LangGraph for scalable multi-agent coordination.",
+      impact: "400+ agents orchestrated",
+      tech: ["LangGraph", "A2A Protocol", "Multi-Agent", "Orchestration"],
+      category: "Enterprise AI"
     }
   ];
 
-  const categories = ["All", "Enterprise AI", "Intelligent Automation", "Data Intelligence", "Platform Architecture", "Model Development"];
+  const categories = ["All", "Enterprise AI", "Intelligent Automation", "Data Intelligence", "Platform Architecture"];
 
   return (
     <section id="projects" className="py-20 bg-muted/20">

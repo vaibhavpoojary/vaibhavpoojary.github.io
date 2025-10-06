@@ -57,8 +57,10 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-muted-foreground leading-relaxed">
             Building enterprise-scale{" "}
             <span className="text-primary font-semibold">LLMs</span>,{" "}
-            <span className="text-accent font-semibold">RAG pipelines</span>, and{" "}
-            <span className="text-neural-blue font-semibold">agentic AI solutions</span>
+            <span className="text-accent font-semibold">RAG pipelines</span>,{" "}
+            <span className="text-neural-blue font-semibold">agentic AI solutions</span>,{" "}
+            <span className="text-primary font-semibold">ML</span>, and{" "}
+            <span className="text-accent font-semibold">DL</span>
           </p>
 
           {/* Social Links */}

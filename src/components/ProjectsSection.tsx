@@ -34,7 +34,14 @@ const ProjectsSection = () => {
       category: "Platform Architecture"
     },
     {
-      title: "Tech Mahindra – NLP Chatbot for Insurance Sector",
+      title: "Tech Mahindra – Chatbot for ITSM Support Team",
+      description: "Built intelligent conversational AI chatbot for IT service management support team automation and ticket handling.",
+      impact: "60% ticket resolution automation",
+      tech: ["NLP", "RASA", "ITSM Integration", "Automation"],
+      category: "Intelligent Automation"
+    },
+    {
+      title: "Capgemini – NLP Chatbot for Insurance Sector",
       description: "Developed intelligent conversational AI chatbot for insurance claims processing and customer support using NLP and intent recognition.",
       impact: "70% faster claim queries, 50% cost reduction",
       tech: ["NLP", "RASA", "Intent Recognition", "Dialogue Management"],

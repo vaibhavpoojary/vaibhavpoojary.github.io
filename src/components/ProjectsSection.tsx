@@ -34,17 +34,10 @@ const ProjectsSection = () => {
       category: "Platform Architecture"
     },
     {
-      title: "Capgemini – Agentic AI Workflow Manager for AWS Glue Recovery",
-      description: "Orchestrated intelligent workflow automation using LangGraph, Claude 3.5, and GPT-4.1 for automated AWS Glue pipeline recovery.",
-      impact: "80% faster recovery",
-      tech: ["LangGraph", "Claude 3.5", "GPT-4.1", "AWS Glue"],
-      category: "Enterprise AI"
-    },
-    {
-      title: "Capgemini – ServiceNow Agentic AI Solution for L1 Agents",
-      description: "Developed multi-agent orchestration using LangGraph to automate L1 ticket resolution and routing.",
-      impact: "60% workforce reduction, 80% efficiency gain",
-      tech: ["LangGraph", "ServiceNow", "Multi-Agent", "Automation"],
+      title: "Tech Mahindra – NLP Chatbot for Insurance Sector",
+      description: "Developed intelligent conversational AI chatbot for insurance claims processing and customer support using NLP and intent recognition.",
+      impact: "70% faster claim queries, 50% cost reduction",
+      tech: ["NLP", "RASA", "Intent Recognition", "Dialogue Management"],
       category: "Intelligent Automation"
     },
     {

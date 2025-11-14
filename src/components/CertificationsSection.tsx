@@ -9,7 +9,6 @@ const CertificationsSection = () => {
       provider: "Amazon Web Services",
       date: "2023",
       description: "Comprehensive cloud architecture and deployment expertise",
-      icon: "☁️",
       color: "text-code-orange"
     },
     {
@@ -17,7 +16,6 @@ const CertificationsSection = () => {
       provider: "Amazon Web Services", 
       date: "2023",
       description: "AI/ML services and implementation on AWS platform",
-      icon: "🤖",
       color: "text-primary"
     },
     {
@@ -25,7 +23,6 @@ const CertificationsSection = () => {
       provider: "IBM",
       date: "2022",
       description: "Advanced data science methodologies and machine learning",
-      icon: "📊",
       color: "text-neural-blue"
     },
     {
@@ -33,7 +30,6 @@ const CertificationsSection = () => {
       provider: "Dataiku",
       date: "2022", 
       description: "Enterprise machine learning platform expertise",
-      icon: "🛠️",
       color: "text-cyber-green"
     }
   ];
@@ -43,15 +39,13 @@ const CertificationsSection = () => {
       title: "Shining Star Award",
       description: "Outstanding performance in GenAI platform development",
       year: "2023",
-      count: 2,
-      icon: "⭐"
+      count: 2
     },
     {
       title: "Rising Star Award",
       description: "Exceptional contribution to AI/ML initiatives",
       year: "2022",
-      count: 1,
-      icon: "🌟"
+      count: 1
     }
   ];
 
@@ -80,8 +74,8 @@ const CertificationsSection = () => {
                 <Card key={index} className="animate-fade-in hover:shadow-glow-primary transition-smooth">
                   <CardHeader>
                     <div className="flex items-start gap-4">
-                      <div className={`text-3xl animate-float ${cert.color}`} style={{animationDelay: `${index * 0.5}s`}}>
-                        {cert.icon}
+                      <div className={`p-3 rounded-lg bg-${cert.color.replace('text-', '')}/10`}>
+                        <Award className={`h-6 w-6 ${cert.color}`} />
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-lg mb-1">{cert.title}</CardTitle>

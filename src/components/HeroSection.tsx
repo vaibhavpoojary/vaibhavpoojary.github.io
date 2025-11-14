@@ -11,56 +11,33 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-hero"></div>
-      
-      {/* Floating Neural Network Nodes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-float opacity-60"></div>
-        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-accent rounded-full animate-float opacity-40" style={{animationDelay: "1s"}}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-neural-blue rounded-full animate-float opacity-50" style={{animationDelay: "2s"}}></div>
-        <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-cyber-green rounded-full animate-float opacity-60" style={{animationDelay: "0.5s"}}></div>
-        <div className="absolute top-1/2 left-1/6 w-1 h-1 bg-primary rounded-full animate-float opacity-70" style={{animationDelay: "1.5s"}}></div>
-        <div className="absolute top-1/6 right-1/6 w-1 h-1 bg-accent rounded-full animate-float opacity-50" style={{animationDelay: "2.5s"}}></div>
-      </div>
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
 
-      <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1200px)] text-center relative z-10">
-        <div className="animate-fade-in">
+      <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1400px)] text-center relative z-10">
+        <div className="animate-fade-in space-y-8 py-12">
           {/* Avatar */}
-          <div className="mb-8 flex justify-center">
+          <div className="flex justify-center">
             <div className="relative">
               <img 
                 src={vaibhavaPhoto} 
                 alt="Vaibhava Poojary - AI/ML Engineer"
-                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover shadow-elegant animate-pulse-glow"
+                className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-cover shadow-elegant"
               />
-              <div className="absolute -bottom-2 -right-2 animate-wave">
-                <span className="text-4xl">👋</span>
-              </div>
             </div>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm{" "}
-            <span className="text-primary">
-              Vaibhava Poojary
-            </span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight tracking-tight">
+            VAIBHAVA POOJARY
           </h1>
 
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-muted-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground/90">
             AI/ML & Generative AI Engineer
           </h2>
 
           {/* Tagline */}
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-muted-foreground leading-relaxed">
-            Building enterprise-scale{" "}
-            <span className="text-primary font-semibold">LLMs</span>,{" "}
-            <span className="text-accent font-semibold">RAG pipelines</span>,{" "}
-            <span className="text-neural-blue font-semibold">agentic AI solutions</span>,{" "}
-            <span className="text-primary font-semibold">ML</span>, and{" "}
-            <span className="text-accent font-semibold">DL</span>
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-5xl mx-auto text-foreground/80 leading-relaxed font-medium">
+            Building enterprise-scale LLMs, RAG pipelines, agentic AI solutions, ML, and DL
           </p>
 
           {/* Social Links */}

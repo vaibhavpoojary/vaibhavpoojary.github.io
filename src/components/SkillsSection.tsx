@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "🚀 Core Programming & Scripting",
+      title: "Core Programming & Scripting",
       skills: [
         { 
           name: "Python", 
@@ -28,7 +28,7 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "🧠 AI / ML / GenAI Stack",
+      title: "AI / ML / GenAI Stack",
       skills: [
         { 
           name: "PyTorch", 
@@ -98,7 +98,7 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "☁️ Cloud Platforms",
+      title: "Cloud Platforms",
       skills: [
         { 
           name: "AWS", 
@@ -118,7 +118,7 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "⚙️ DevOps & Containerization",
+      title: "DevOps & Containerization",
       skills: [
         { 
           name: "Docker", 
@@ -133,7 +133,7 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "🧩 Data & Storage",
+      title: "Data & Storage",
       skills: [
         { 
           name: "SQL", 
@@ -178,7 +178,7 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "🧭 Frameworks & Libraries",
+      title: "Frameworks & Libraries",
       skills: [
         { 
           name: "FastAPI", 
@@ -208,7 +208,7 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "📈 MLOps & Monitoring",
+      title: "MLOps & Monitoring",
       skills: [
         { 
           name: "MLOps", 
@@ -228,7 +228,7 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "🧰 Development Tools",
+      title: "Development Tools",
       skills: [
         { 
           name: "VS Code", 

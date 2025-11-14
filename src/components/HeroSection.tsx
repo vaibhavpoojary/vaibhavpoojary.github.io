@@ -42,25 +42,25 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-space text-5xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight tracking-tight">
-            <span className="block text-foreground mb-2">Hi, I'm</span>
-            <span className="block font-orbitron text-6xl md:text-9xl lg:text-[10rem] text-gradient animate-pulse-glow">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            Hi, I'm{" "}
+            <span className="text-primary">
               Vaibhava Poojary
             </span>
           </h1>
 
-          <h2 className="font-space text-3xl md:text-5xl lg:text-7xl font-bold mb-8 text-gradient-alt tracking-wide">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-muted-foreground">
             AI/ML & Generative AI Engineer
           </h2>
 
           {/* Tagline */}
-          <p className="font-space text-xl md:text-3xl lg:text-4xl mb-12 max-w-6xl mx-auto text-foreground leading-relaxed tracking-wide">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-muted-foreground leading-relaxed">
             Building enterprise-scale{" "}
-            <span className="font-bold text-primary">LLMs</span>,{" "}
-            <span className="font-bold text-accent">RAG pipelines</span>,{" "}
-            <span className="font-bold text-neural-blue">agentic AI solutions</span>,{" "}
-            <span className="font-bold text-primary">ML</span>, and{" "}
-            <span className="font-bold text-accent">DL</span>
+            <span className="text-primary font-semibold">LLMs</span>,{" "}
+            <span className="text-accent font-semibold">RAG pipelines</span>,{" "}
+            <span className="text-neural-blue font-semibold">agentic AI solutions</span>,{" "}
+            <span className="text-primary font-semibold">ML</span>, and{" "}
+            <span className="text-accent font-semibold">DL</span>
           </p>
 
           {/* Social Links */}

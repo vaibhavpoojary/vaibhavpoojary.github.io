@@ -285,18 +285,19 @@ const SkillsSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4 sm:gap-6">
                   {category.skills.map((skill, skillIndex) => (
                     <div 
                       key={skillIndex} 
-                      className="flex flex-col items-center p-2 sm:p-3 rounded-lg hover:bg-muted/50 transition-smooth group cursor-pointer"
+                      className="flex items-center justify-center p-2 rounded-lg hover:bg-muted/50 transition-smooth group cursor-pointer"
+                      title={skill.name}
                     >
-                      <div className="mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                      <div className="group-hover:scale-110 transition-transform">
                         {skill.logo.startsWith('http') ? (
                           <img 
                             src={skill.logo} 
                             alt={`${skill.name} logo`}
-                            className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                            className="w-6 h-6 sm:w-8 sm:h-8 object-contain opacity-80 group-hover:opacity-100"
                             onError={(e) => {
                               const target = e.currentTarget as HTMLImageElement;
                               target.style.display = 'none';
@@ -305,12 +306,12 @@ const SkillsSection = () => {
                             }}
                           />
                         ) : (
-                          <span className="text-2xl sm:text-3xl animate-float" style={{animationDelay: `${skillIndex * 0.1}s`}}>
+                          <span className="text-lg sm:text-xl animate-float opacity-80 group-hover:opacity-100" style={{animationDelay: `${skillIndex * 0.1}s`}}>
                             {skill.logo}
                           </span>
                         )}
                         <span 
-                          className="fallback text-2xl sm:text-3xl animate-float hidden" 
+                          className="fallback text-lg sm:text-xl animate-float hidden" 
                           style={{animationDelay: `${skillIndex * 0.1}s`}}
                         >
                           {skill.name === 'Python' ? '🐍' : 
@@ -325,12 +326,6 @@ const SkillsSection = () => {
                            skill.name === 'Linux' ? '🐧' :
                            '⚙️'}
                         </span>
-                      </div>
-                      <div className="text-center">
-                        <div className="font-medium text-xs sm:text-sm mb-1">{skill.name}</div>
-                        <div className="text-[10px] sm:text-xs text-muted-foreground line-clamp-2">
-                          {skill.description}
-                        </div>
                       </div>
                     </div>
                   ))}

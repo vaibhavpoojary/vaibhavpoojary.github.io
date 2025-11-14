@@ -98,31 +98,33 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Button 
+          <div className="animate-slide-in-bottom flex flex-col sm:flex-row justify-center gap-4 mb-16" style={{animationDelay: "1s"}}>
+            <Button
               size="lg"
-              className="shadow-glow-primary hover:shadow-glow-accent transition-bounce"
+              className="bg-gradient-to-r from-primary to-neural-blue hover:from-primary/90 hover:to-neural-blue/90 text-primary-foreground shadow-glow-primary transition-all duration-300 hover:scale-105 font-display font-semibold"
               onClick={() => scrollToSection("projects")}
             >
-              View Projects
+              View My Work
             </Button>
-            <Button 
-              variant="outline"
+            <Button
               size="lg"
-              className="hover:shadow-glow-primary transition-bounce"
+              variant="outline"
+              className="hover:shadow-glow-accent transition-all duration-300 hover:scale-105 hover:bg-accent/10 hover:border-accent/50 backdrop-blur-sm font-display font-semibold"
               onClick={() => scrollToSection("contact")}
             >
-              Contact Me
+              Get In Touch
             </Button>
           </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute right-4 bottom-6 sm:right-8 sm:bottom-8 animate-float">
-          <ChevronDown 
-            className="h-8 w-8 text-muted-foreground cursor-pointer hover:text-primary transition-smooth"
+          {/* Scroll Indicator */}
+          <div 
+            className="animate-slide-in-bottom flex flex-col items-center cursor-pointer hover:opacity-80 transition-smooth group"
             onClick={() => scrollToSection("about")}
-          />
+            style={{animationDelay: "1.2s"}}
+          >
+            <p className="text-sm text-muted-foreground mb-2 font-light">Scroll to explore</p>
+            <ChevronDown className="h-6 w-6 text-primary animate-bounce group-hover:text-accent transition-colors" />
+          </div>
         </div>
       </div>
     </section>

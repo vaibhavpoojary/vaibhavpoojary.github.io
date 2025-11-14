@@ -42,25 +42,25 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight">
             Hi, I'm{" "}
-            <span className="text-primary">
+            <span className="text-foreground">
               Vaibhava Poojary
             </span>
           </h1>
 
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-muted-foreground">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 text-foreground">
             AI/ML & Generative AI Engineer
           </h2>
 
           {/* Tagline */}
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-muted-foreground leading-relaxed">
+          <p className="text-2xl md:text-3xl lg:text-4xl mb-12 max-w-6xl mx-auto text-foreground leading-relaxed">
             Building enterprise-scale{" "}
-            <span className="text-primary font-semibold">LLMs</span>,{" "}
-            <span className="text-accent font-semibold">RAG pipelines</span>,{" "}
-            <span className="text-neural-blue font-semibold">agentic AI solutions</span>,{" "}
-            <span className="text-primary font-semibold">ML</span>, and{" "}
-            <span className="text-accent font-semibold">DL</span>
+            <span className="font-semibold">LLMs</span>,{" "}
+            <span className="font-semibold">RAG pipelines</span>,{" "}
+            <span className="font-semibold">agentic AI solutions</span>,{" "}
+            <span className="font-semibold">ML</span>, and{" "}
+            <span className="font-semibold">DL</span>
           </p>
 
           {/* Social Links */}

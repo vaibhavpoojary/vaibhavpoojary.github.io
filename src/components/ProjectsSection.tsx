@@ -67,6 +67,13 @@ const ProjectsSection = () => {
       impact: "Unified agent development platform",
       tech: ["AWS Bedrock", "LangGraph", "MLFlow", "Agent Framework"],
       category: "Platform Architecture"
+    },
+    {
+      title: "AWS FinOps – Cloud Cost Optimization Platform",
+      description: "Designed and implemented an AWS FinOps solution to monitor, analyze, and optimize cloud infrastructure costs across multiple business units.",
+      impact: "25% cloud spend reduction in 3 months",
+      tech: ["AWS Cost Explorer", "AWS Budgets", "CloudWatch", "FinOps"],
+      category: "Enterprise AI"
     }
   ];
 

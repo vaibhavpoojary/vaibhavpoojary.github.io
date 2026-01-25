@@ -5,11 +5,18 @@ import { Building2, Calendar, MapPin } from "lucide-react";
 const AboutSection = () => {
   const careerTimeline = [
     {
+      company: "OpenText",
+      period: "Nov 2024 – Present",
+      role: "Senior AI Platform Engineer",
+      location: "Bangalore, India",
+      description: "Building Gen AI & Agentic AI platforms with multi-agent orchestration and advanced RAG"
+    },
+    {
       company: "Capgemini",
-      period: "May 2022 – Present",
+      period: "May 2022 – Nov 2024",
       role: "Senior AI/ML Engineer",
       location: "Bangalore, India",
-      description: "Leading enterprise GenAI initiatives and building production-scale LLM solutions"
+      description: "Led enterprise GenAI initiatives and built production-scale LLM solutions"
     },
     {
       company: "Tech Mahindra",

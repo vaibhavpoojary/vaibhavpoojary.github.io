@@ -5,9 +5,23 @@ import { Calendar, Building2, TrendingUp } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
+      company: "OpenText",
+      role: "Senior AI Platform Engineer",
+      period: "Nov 2024 – Present",
+      location: "Bangalore, India",
+      achievements: [
+        {
+          title: "Gen AI & Agentic AI Platform",
+          description: "Building enterprise Gen AI and Agentic AI solutions with multi-agent orchestration",
+          impact: "Platform Lead",
+          tech: ["LangGraph", "LangChain", "Multi-Agent", "Advanced RAG"]
+        }
+      ]
+    },
+    {
       company: "Capgemini",
       role: "Senior AI/ML Engineer",
-      period: "May 2022 – Present",
+      period: "May 2022 – Nov 2024",
       location: "Bangalore, India",
       achievements: [
         {

@@ -5,70 +5,39 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactEmailRequest {
-  name: string;
-  email: string;
-  message: string;
-}
-
-const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
+serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { name, email, message }: ContactEmailRequest = await req.json();
+    const { name, email, message } = await req.json();
 
-    // Validate input
     if (!name || !email || !message) {
-      console.error("Missing required fields:", { name: !!name, email: !!email, message: !!message });
-      return new Response(
-        JSON.stringify({ error: "Name, email, and message are required" }),
-        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
-      );
+      return new Response(JSON.stringify({ error: "All fields required" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
-    console.log("Sending contact email from:", email);
-
-    // Send email to Vaibhav
-    const emailResponse = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+    const data = await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
       to: ["vaibhavb568@gmail.com"],
-      subject: `Portfolio Contact: ${name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>From:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <hr/>
-        <h3>Message:</h3>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-        <hr/>
-        <p style="color: #666; font-size: 12px;">This message was sent from your portfolio contact form.</p>
-      `,
+      subject: `Contact: ${name}`,
       reply_to: email,
+      html: `<p><b>From:</b> ${name} (${email})</p><p><b>Message:</b></p><p>${message.replace(/\n/g, "<br>")}</p>`,
     });
 
-    console.log("Email sent successfully:", emailResponse);
-
-    return new Response(JSON.stringify({ success: true, data: emailResponse }), {
-      status: 200,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
+    return new Response(JSON.stringify({ success: true, data }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error: any) {
-    console.error("Error in send-contact-email function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    );
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   }
-};
-
-serve(handler);
+});

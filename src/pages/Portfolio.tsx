@@ -36,9 +36,13 @@ const Portfolio = () => {
       ],
       "worksFor": {
         "@type": "Organization",
-        "name": "Capgemini"
+        "name": "OpenText"
       },
       "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "Capgemini"
+        },
         {
           "@type": "Organization",
           "name": "Tech Mahindra"

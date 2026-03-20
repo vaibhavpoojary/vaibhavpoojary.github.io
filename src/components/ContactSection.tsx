@@ -44,7 +44,7 @@ const ContactSection = () => {
             Contact
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-20 text-balance leading-[1.1]">
-            Let's Work<br />Together
+            Let's Work <br />Together
           </h2>
         </ScrollReveal>
 

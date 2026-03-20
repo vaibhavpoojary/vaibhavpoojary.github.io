@@ -7,7 +7,7 @@ const experiences = [
     period: "2024",
     label: "NOW",
     description:
-      "Building Gen AI & Agentic AI platforms with multi-agent orchestration, LangGraph, LangChain, and advanced RAG systems for enterprise-scale solutions.",
+      "Developing Aviator Development Toolkit (core product) — templates and React UI for agentic AI with LangGraph, LangChain, GCP, OpenAI, multi-agent orchestration, sub-graphs, meta-graphs, advanced RAG, multi-modal RAG, and MCP.",
   },
   {
     role: "Senior AI/ML Engineer",

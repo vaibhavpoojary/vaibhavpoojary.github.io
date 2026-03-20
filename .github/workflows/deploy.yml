@@ -33,6 +33,8 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          VITE_SUPABASE_URL: https://dnfxmlehkcstnzhzyxoh.supabase.co
+          VITE_SUPABASE_PUBLISHABLE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRuZnhtbGVoa2NzdG56aHp5eG9oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk2NTI2MTMsImV4cCI6MjA3NTIyODYxM30.xJRiDEnBUtrfrIZynMR0cDU9mIQJ106B7QKL4tTDhCU
 
       - name: Add SPA fallback (404.html)
         run: cp dist/index.html dist/404.html

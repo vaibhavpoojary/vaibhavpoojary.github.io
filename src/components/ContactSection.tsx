@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import ScrollReveal from "./ScrollReveal";
+import profileImage from "@/assets/vaibhava-profile.jpg";
 
 const ContactSection = () => {
   const { toast } = useToast();

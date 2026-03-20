@@ -10,7 +10,7 @@ const experiences = [
   "Building Gen AI & Agentic AI platforms with multi-agent orchestration, LangGraph, LangChain, and advanced RAG systems for enterprise-scale solutions."
 },
 {
-  role: "Senior AI/ML Engineer",
+  role: "ML Engineer - B2",
   company: "Capgemini",
   period: "2022",
   label: "2022",
@@ -18,7 +18,7 @@ const experiences = [
   "Led enterprise GenAI initiatives including RAISE™ platform (30K+ users), AURA NLP assistant (95% accuracy), LangGraph multi-agent workflows, and LoRA/QLoRA fine-tuning pipelines."
 },
 {
-  role: "AI/ML Engineer",
+  role: "ML Engineer",
   company: "Tech Mahindra",
   period: "2019",
   label: "2019",

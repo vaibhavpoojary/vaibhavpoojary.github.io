@@ -48,9 +48,7 @@ const GitHubSection = () => {
           <p className="text-sm text-muted-foreground tracking-widest uppercase mb-4">
             Open Source
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-16 text-balance leading-[1.1]">​Personal Projects 
-            <br />Projects
-          </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-16 text-balance leading-[1.1]">​Personal Projects</h2>
         </ScrollReveal>
 
         <div className="space-y-0">

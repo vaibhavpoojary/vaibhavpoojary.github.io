@@ -21,7 +21,7 @@ const CertificationsSection = () => {
             Recognition
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-20 text-balance leading-[1.1]">
-            Certifications &<br />Awards
+            Certifications & Awards
           </h2>
         </ScrollReveal>
 

@@ -1,81 +1,99 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+
+const navItems = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "experience", label: "Career" },
+  { id: "projects", label: "Work" },
+  { id: "certifications", label: "Certifications" },
+  { id: "contact", label: "Contact" },
+];
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
-  const navItems = [{
-    id: "hero",
-    label: "Home"
-  }, {
-    id: "about",
-    label: "About"
-  }, {
-    id: "skills",
-    label: "Skills"
-  }, {
-    id: "experience",
-    label: "Experience"
-  }, {
-    id: "projects",
-    label: "Projects"
-  }, {
-    id: "github",
-    label: "GitHub"
-  }, {
-    id: "certifications",
-    label: "Certifications"
-  }, {
-    id: "contact",
-    label: "Contact"
-  }];
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => document.getElementById(item.id));
-      const scrollPosition = window.scrollY + 100;
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].id);
-          break;
-        }
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
-  return <nav className="fixed top-0 w-full bg-card/80 backdrop-blur-md border-b border-border z-50 transition-smooth">
-      <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1200px)] flex items-center justify-center h-16">
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-1">
-          {navItems.map(item => <Button key={item.id} variant={activeSection === item.id ? "default" : "ghost"} onClick={() => scrollToSection(item.id)} className={`transition-smooth ${activeSection === item.id ? "shadow-glow-primary" : "hover:shadow-glow-accent"}`}>
+
+  return (
+    <motion.nav
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : ""
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+        <button
+          onClick={() => scrollTo("hero")}
+          className="text-lg font-bold tracking-tight hover:opacity-70 transition-opacity"
+        >
+          VP
+        </button>
+
+        {/* Desktop */}
+        <div className="hidden md:flex items-center gap-8">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollTo(item.id)}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+            >
               {item.label}
-            </Button>)}
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground group-hover:w-full transition-all duration-300" />
+            </button>
+          ))}
         </div>
 
-        {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden p-2 hover:bg-accent rounded-md transition-colors"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </Button>
+        </button>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && <div className="md:hidden bg-card border-b border-border animate-fade-in">
-          <div className="container mx-auto px-4 py-4 space-y-2">
-            {navItems.map(item => <Button key={item.id} variant={activeSection === item.id ? "default" : "ghost"} onClick={() => scrollToSection(item.id)} className="w-full justify-start">
-                {item.label}
-              </Button>)}
-          </div>
-        </div>}
-    </nav>;
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-background border-b border-border overflow-hidden"
+          >
+            <div className="px-6 py-4 space-y-1">
+              {navItems.map((item, i) => (
+                <motion.button
+                  key={item.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  onClick={() => scrollTo(item.id)}
+                  className="block w-full text-left py-3 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                >
+                  {item.label}
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
+  );
 };
+
 export default Navigation;

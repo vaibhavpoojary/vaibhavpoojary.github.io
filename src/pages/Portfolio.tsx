@@ -12,112 +12,60 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 
 const Portfolio = () => {
   useEffect(() => {
-    // Update document title and meta tags for SEO
-    document.title = "Vaibhava Poojary - AI/ML & Generative AI Engineer | Portfolio";
-    
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Vaibhava Poojary - Senior AI/ML & Generative AI Engineer with 5+ years building production LLMs, RAG pipelines, and agentic workflows. Expert in PyTorch, Transformers, LangChain, AWS.");
+    document.title = "Vaibhava Poojary – Senior AI Platform Engineer";
+
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "Vaibhava Poojary – Senior AI/ML & Generative AI Engineer. Building production LLMs, RAG pipelines, and agentic workflows at enterprise scale."
+      );
     }
 
-    // Add structured data for SEO
-    const structuredData = {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Vaibhava Poojary",
-      "jobTitle": "AI/ML & Generative AI Engineer",
-      "description": "Senior AI/ML Engineer specializing in enterprise-scale LLMs, RAG pipelines, and agentic AI solutions",
-      "email": "vaibhavb568@gmail.com",
-      "url": "https://vaibhava-poojary-aiml-engineer.lovable.app",
-      "sameAs": [
+      name: "Vaibhava Poojary",
+      jobTitle: "Senior AI Platform Engineer",
+      email: "vaibhavb568@gmail.com",
+      url: "https://vaibhava-poojary-aiml-engineer.lovable.app",
+      sameAs: [
         "https://github.com/vaibhavpoojary",
-        "https://www.linkedin.com/in/vaibhavpoojary"
+        "https://www.linkedin.com/in/vaibhavpoojary",
       ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "OpenText"
-      },
-      "alumniOf": [
-        {
-          "@type": "Organization",
-          "name": "Capgemini"
-        },
-        {
-          "@type": "Organization",
-          "name": "Tech Mahindra"
-        }
+      worksFor: { "@type": "Organization", name: "OpenText" },
+      knowsAbout: [
+        "Artificial Intelligence", "Machine Learning", "Generative AI",
+        "Large Language Models", "RAG Pipelines", "LangGraph", "LangChain",
       ],
-      "knowsAbout": [
-        "Artificial Intelligence",
-        "Machine Learning", 
-        "Generative AI",
-        "Large Language Models",
-        "RAG Pipelines",
-        "PyTorch",
-        "LangChain",
-        "AWS",
-        "Python"
-      ]
-    };
-
-    // Add structured data to head
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
+    });
     document.head.appendChild(script);
-
-    return () => {
-      // Cleanup structured data on unmount
-      document.head.removeChild(script);
-    };
+    return () => { document.head.removeChild(script); };
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-background">
-      {/* Navigation */}
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      
-      {/* Main Content */}
       <main>
-        {/* Hero Section */}
         <HeroSection />
-        
-        {/* About Section */}
         <AboutSection />
-        
-        {/* Skills Section */}
         <SkillsSection />
-        
-        {/* Experience Section */}
         <ExperienceSection />
-        
-        {/* Projects Section */}
         <ProjectsSection />
-        
-        {/* GitHub Projects Section */}
         <GitHubSection />
-        
-        {/* Certifications Section */}
         <CertificationsSection />
-        
-        {/* Contact Section */}
         <ContactSection />
       </main>
-      
-      {/* Floating Contact Button */}
       <FloatingContactButton />
-      
-      {/* Footer */}
-      <footer className="py-6 sm:py-8 border-t border-border bg-card/50">
-        <div className="container mx-auto px-4 sm:px-6 max-w-[min(100%,1200px)] text-center">
-          <p className="text-muted-foreground text-xs sm:text-sm">
-            © 2024 Vaibhava Poojary. All rights reserved. | 
-            <span className="text-primary font-medium"> AI/ML & Generative AI Engineer</span>
+
+      <footer className="py-12 px-6 border-t border-border">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            Designed and Developed by Vaibhava Poojary
           </p>
-          <p className="text-[10px] sm:text-xs text-muted-foreground mt-2">
-            Built with React, TypeScript, Tailwind CSS, and lots of ☕
-          </p>
+          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()}</p>
         </div>
       </footer>
     </div>

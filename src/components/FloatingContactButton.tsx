@@ -1,64 +1,43 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Mail, Github, Linkedin } from "lucide-react";
+
+const options = [
+  { icon: Mail, href: "mailto:vaibhavb568@gmail.com" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/vaibhavpoojary" },
+  { icon: Github, href: "https://github.com/vaibhavpoojary" },
+];
 
 const FloatingContactButton = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const contactOptions = [
-    {
-      icon: Mail,
-      label: "Email",
-      action: () => window.open("mailto:vaibhavb568@gmail.com"),
-      color: "text-primary"
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn", 
-      action: () => window.open("https://www.linkedin.com/in/vaibhavpoojary", "_blank"),
-      color: "text-accent"
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      action: () => window.open("https://github.com/vaibhavpoojary", "_blank"),
-      color: "text-neural-blue"
-    }
-  ];
-
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      {/* Contact Options */}
-      {isOpen && (
-        <div className="flex flex-col gap-3 mb-3 animate-fade-in">
-          {contactOptions.map((option, index) => {
-            const IconComponent = option.icon;
-            return (
-              <Button
-                key={index}
-                size="icon"
-                variant="outline"
-                className={`shadow-elegant hover:shadow-glow-primary transition-bounce ${option.color} bg-card/90 backdrop-blur-sm`}
-                onClick={option.action}
-                style={{animationDelay: `${index * 0.1}s`}}
-              >
-                <IconComponent className="h-5 w-5" />
-              </Button>
-            );
-          })}
-        </div>
-      )}
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
+      <AnimatePresence>
+        {isOpen &&
+          options.map((opt, i) => (
+            <motion.a
+              key={i}
+              href={opt.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.5, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.5, y: 10 }}
+              transition={{ delay: i * 0.05, duration: 0.2 }}
+              className="w-10 h-10 rounded-full border border-border bg-background flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
+            >
+              <opt.icon className="h-4 w-4" />
+            </motion.a>
+          ))}
+      </AnimatePresence>
 
-      {/* Main Button */}
-      <Button
-        size="icon"
-        className={`h-14 w-14 rounded-full shadow-glow-primary hover:shadow-glow-accent transition-bounce ${
-          isOpen ? "rotate-45" : ""
-        }`}
+      <button
         onClick={() => setIsOpen(!isOpen)}
+        className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center hover:opacity-90 transition-all duration-300 active:scale-95"
       >
-        {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
-      </Button>
+        {isOpen ? <X className="h-5 w-5" /> : <MessageCircle className="h-5 w-5" />}
+      </button>
     </div>
   );
 };

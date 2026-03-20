@@ -95,11 +95,12 @@ const ContactSection = () => {
           {/* Profile + Socials */}
           <ScrollReveal delay={0.2}>
             <div className="space-y-8">
-              <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-[0_8px_30px_hsl(0_0%_0%/0.4)] border border-border">
+              <div className="w-40 h-40 rounded-2xl overflow-hidden shadow-[0_8px_30px_hsl(0_0%_0%/0.4)] border border-border">
                 <img
                   src={profileImage}
                   alt="Vaibhava Poojary"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center 75%" }}
                 />
               </div>
 

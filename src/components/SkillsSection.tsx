@@ -37,7 +37,7 @@ const SkillsSection = () => {
           <p className="text-sm text-muted-foreground tracking-widest uppercase mb-4">
             What I Do
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-16 text-balance leading-[1.1]">Expertise & Skillset
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-16 text-balance leading-[1.1]">​
 
             <br />Skillset
           </h2>

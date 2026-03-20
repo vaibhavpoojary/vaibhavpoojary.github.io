@@ -35,7 +35,7 @@ const ExperienceSection = () => {
           <p className="text-sm text-muted-foreground tracking-widest uppercase mb-4">
             Career
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-20 text-balance leading-[1.1]">​
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-20 text-balance leading-[1.1]">​Experience
             <br />Experience
           </h2>
         </ScrollReveal>

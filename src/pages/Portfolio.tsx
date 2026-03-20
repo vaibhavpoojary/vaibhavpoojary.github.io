@@ -22,27 +22,36 @@ const Portfolio = () => {
       );
     }
 
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Vaibhava Poojary",
-      jobTitle: "Senior AI Platform Engineer",
-      email: "vaibhavb568@gmail.com",
-      url: "https://vaibhava-poojary-aiml-engineer.lovable.app",
-      sameAs: [
-        "https://github.com/vaibhavpoojary",
-        "https://www.linkedin.com/in/vaibhavpoojary",
-      ],
-      worksFor: { "@type": "Organization", name: "OpenText" },
-      knowsAbout: [
-        "Artificial Intelligence", "Machine Learning", "Generative AI",
-        "Large Language Models", "RAG Pipelines", "LangGraph", "LangChain",
-      ],
-    });
-    document.head.appendChild(script);
-    return () => { document.head.removeChild(script); };
+    const existingScript = document.querySelector('script[data-json-ld="portfolio"]');
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.setAttribute("data-json-ld", "portfolio");
+      script.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Vaibhava Poojary",
+        jobTitle: "Senior AI Platform Engineer",
+        email: "vaibhavb568@gmail.com",
+        url: "https://vaibhava-poojary-aiml-engineer.lovable.app",
+        sameAs: [
+          "https://github.com/vaibhavpoojary",
+          "https://www.linkedin.com/in/vaibhavpoojary",
+        ],
+        worksFor: { "@type": "Organization", name: "OpenText" },
+        knowsAbout: [
+          "Artificial Intelligence", "Machine Learning", "Generative AI",
+          "Large Language Models", "RAG Pipelines", "LangGraph", "LangChain",
+        ],
+      });
+      document.head.appendChild(script);
+    }
+    return () => {
+      const s = document.querySelector('script[data-json-ld="portfolio"]');
+      if (s && s.parentNode) {
+        s.parentNode.removeChild(s);
+      }
+    };
   }, []);
 
   return (

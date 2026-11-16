@@ -6,7 +6,8 @@ import ScrollReveal from "./ScrollReveal";
 const projects = [
   {
     num: "01",
-    title: "Aviator Development Toolkit – OpenText",
+    title: "Aviator Development Toolkit",
+    company: "OpenText",
     category: "Core Product",
     tools: "LangGraph, LangChain, GCP, OpenAI, React, MCP",
     impact: "OpenText's core AI product",
@@ -14,6 +15,7 @@ const projects = [
   {
     num: "02",
     title: "Unilever – Agentic Data Pipeline",
+    company: "Capgemini",
     category: "Enterprise AI",
     tools: "AWS Glue, LangGraph, Claude 3.5",
     impact: "80% downtime reduction",
@@ -21,6 +23,7 @@ const projects = [
   {
     num: "03",
     title: "GE Aerospace – ServiceNow Agent",
+    company: "Capgemini",
     category: "Intelligent Automation",
     tools: "ServiceNow, NLP, Agent Framework",
     impact: "60% automated resolution",
@@ -28,6 +31,7 @@ const projects = [
   {
     num: "04",
     title: "RAG-Based SQL Query Generator",
+    company: "Capgemini",
     category: "Data Intelligence",
     tools: "RAG, NLP, Semantic Search",
     impact: "60% less manual SQL",
@@ -35,6 +39,7 @@ const projects = [
   {
     num: "05",
     title: "RAISE™ – AI Microservices Platform",
+    company: "Capgemini",
     category: "Platform Architecture",
     tools: "LLM Inference, RAG, Microservices",
     impact: "30K+ active users",
@@ -42,6 +47,7 @@ const projects = [
   {
     num: "06",
     title: "A2A Agent Protocol – Multi-Agent",
+    company: "Capgemini",
     category: "Enterprise AI",
     tools: "LangGraph, A2A Protocol, Orchestration",
     impact: "400+ agents orchestrated",
@@ -49,9 +55,18 @@ const projects = [
   {
     num: "07",
     title: "Agent Builder Service",
+    company: "Capgemini",
     category: "Platform Architecture",
     tools: "AWS Bedrock, LangGraph, MLFlow",
     impact: "Unified agent platform",
+  },
+  {
+    num: "08",
+    title: "NLP Chatbot for ITSM Support",
+    company: "Tech Mahindra",
+    category: "Conversational AI",
+    tools: "Transformers, NLP, AWS",
+    impact: "Automated ITSM ticket resolution",
   },
 ];
 
@@ -109,7 +124,9 @@ const ProjectsSection = () => {
               <h3 className="text-2xl md:text-3xl font-semibold mt-4 mb-2">
                 {projects[current].title}
               </h3>
-              <p className="text-muted-foreground">{projects[current].category}</p>
+              <p className="text-muted-foreground">
+                {projects[current].company} · {projects[current].category}
+              </p>
             </div>
 
             <div className="space-y-8">

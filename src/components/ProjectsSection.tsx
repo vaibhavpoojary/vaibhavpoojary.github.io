@@ -6,14 +6,46 @@ import ScrollReveal from "./ScrollReveal";
 const projects = [
   {
     num: "01",
-    title: "Aviator Development Toolkit",
+    title: "Aviator Development Toolkit (ADT)",
     company: "OpenText",
     category: "Core Product",
-    tools: "LangGraph, LangChain, GCP, OpenAI, React, MCP",
-    impact: "OpenText's core AI product",
+    tools: "LangGraph, LangChain, OpenAI, GCP, React, MCP",
+    impact: "OpenText's flagship Agentic AI platform",
   },
   {
     num: "02",
+    title: "Reusable Agentic Harness for NLP2SQL",
+    company: "OpenText",
+    category: "Enterprise AI",
+    tools: "LangGraph, MCP, OpenTelemetry, React, Material-UI, PostgreSQL",
+    impact: "Talks to any database with a clean, reusable setup",
+  },
+  {
+    num: "03",
+    title: "Agent Armor – AI Security",
+    company: "OpenText",
+    category: "AI Security",
+    tools: "Agent Security, MCP, LLM Red Teaming, Python",
+    impact: "Agent, model & MCP attack coverage with detailed reports",
+  },
+  {
+    num: "04",
+    title: "Lite LLM Gateway & MCP Gateway",
+    company: "OpenText",
+    category: "Platform Architecture",
+    tools: "LLM Gateway, MCP, Multi-Provider, Python, FastAPI",
+    impact: "One gateway for all providers and models",
+  },
+  {
+    num: "05",
+    title: "Reusable Agentic Patterns Library",
+    company: "OpenText",
+    category: "Agentic AI",
+    tools: "LangGraph, Multi-Agent Orchestration, ReAct, Hand-off",
+    impact: "8 production-ready agentic patterns",
+  },
+  {
+    num: "06",
     title: "Unilever – Agentic Data Pipeline",
     company: "Capgemini",
     category: "Enterprise AI",
@@ -21,7 +53,7 @@ const projects = [
     impact: "80% downtime reduction",
   },
   {
-    num: "03",
+    num: "07",
     title: "GE Aerospace – ServiceNow Agent",
     company: "Capgemini",
     category: "Intelligent Automation",
@@ -29,7 +61,7 @@ const projects = [
     impact: "60% automated resolution",
   },
   {
-    num: "04",
+    num: "08",
     title: "RAG-Based SQL Query Generator",
     company: "Capgemini",
     category: "Data Intelligence",
@@ -37,7 +69,7 @@ const projects = [
     impact: "60% less manual SQL",
   },
   {
-    num: "05",
+    num: "09",
     title: "RAISE™ – AI Microservices Platform",
     company: "Capgemini",
     category: "Platform Architecture",
@@ -45,7 +77,7 @@ const projects = [
     impact: "30K+ active users",
   },
   {
-    num: "06",
+    num: "10",
     title: "A2A Agent Protocol – Multi-Agent",
     company: "Capgemini",
     category: "Enterprise AI",
@@ -53,7 +85,7 @@ const projects = [
     impact: "400+ agents orchestrated",
   },
   {
-    num: "07",
+    num: "11",
     title: "Agent Builder Service",
     company: "Capgemini",
     category: "Platform Architecture",
@@ -61,7 +93,7 @@ const projects = [
     impact: "Unified agent platform",
   },
   {
-    num: "08",
+    num: "12",
     title: "NLP Chatbot for ITSM Support",
     company: "Tech Mahindra",
     category: "Conversational AI",

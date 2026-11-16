@@ -8,7 +8,7 @@ const experiences = [
   period: "Nov 2025 – Present",
   label: "NOW",
   description:
-  "Developing OpenText's core Gen AI & Agentic AI product — building templates and React UIs for agentic AI with LangGraph, LangChain, GCP, and OpenAI. Working on multi-agent orchestration, sub-graphs, meta-graphs, advanced RAG, multi-modal RAG, and MCP integrations."
+  "Building OpenText's core Gen AI & Agentic AI platform — reusable agentic harnesses, LLM & MCP gateways, agent security tooling, and production-grade React UIs with LangGraph, LangChain, OpenAI, GCP, and OpenTelemetry. Co-working with principal software architects and principal AI developers on platform architecture."
 },
 {
   role: "ML Engineer - B2",

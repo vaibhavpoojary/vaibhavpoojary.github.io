@@ -124,7 +124,9 @@ const ProjectsSection = () => {
               <h3 className="text-2xl md:text-3xl font-semibold mt-4 mb-2">
                 {projects[current].title}
               </h3>
-              <p className="text-muted-foreground">{projects[current].category}</p>
+              <p className="text-muted-foreground">
+                {projects[current].company} · {projects[current].category}
+              </p>
             </div>
 
             <div className="space-y-8">

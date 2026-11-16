@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import ScrollReveal from "./ScrollReveal";
-import profileImage from "@/assets/vaibhava-profile.jpg";
+import profileAsset from "@/assets/vaibhava-portrait.jpg.asset.json";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -95,12 +95,11 @@ const ContactSection = () => {
           {/* Profile + Socials */}
           <ScrollReveal delay={0.2}>
             <div className="space-y-8">
-              <div className="w-40 h-40 rounded-2xl overflow-hidden shadow-[0_8px_30px_hsl(0_0%_0%/0.4)] border border-border">
+              <div className="w-48 h-48 p-2 rounded-2xl bg-secondary/40 border border-border shadow-[0_8px_30px_hsl(0_0%_0%/0.4)] mx-auto md:mx-0">
                 <img
-                  src={profileImage}
+                  src={profileAsset.url}
                   alt="Vaibhava Poojary"
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: "center 75%" }}
+                  className="w-full h-full object-cover object-center rounded-xl"
                 />
               </div>
 

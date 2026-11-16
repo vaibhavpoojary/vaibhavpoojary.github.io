@@ -55,8 +55,11 @@ const ExperienceSection = () => {
                   <h3 className="text-xl md:text-2xl font-semibold mb-1 group-hover:translate-x-1 transition-transform duration-300">
                     {exp.role}
                   </h3>
-                  <p className="text-muted-foreground font-medium mb-4">
+                  <p className="text-muted-foreground font-medium">
                     {exp.company}
+                  </p>
+                  <p className="text-sm text-muted-foreground/70 mb-4">
+                    {exp.location} · {exp.period}
                   </p>
                   <p className="text-muted-foreground leading-relaxed max-w-2xl">
                     {exp.description}

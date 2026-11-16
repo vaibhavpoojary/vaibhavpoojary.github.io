@@ -4,15 +4,17 @@ const experiences = [
 {
   role: "Senior AI Platform Engineer",
   company: "OpenText",
-  period: "2024",
+  location: "Bangalore, India",
+  period: "Nov 2025 – Present",
   label: "NOW",
   description:
-  "Building Gen AI & Agentic AI platforms with multi-agent orchestration, LangGraph, LangChain, and advanced RAG systems for enterprise-scale solutions."
+  "Developing OpenText's core Gen AI & Agentic AI product — building templates and React UIs for agentic AI with LangGraph, LangChain, GCP, and OpenAI. Working on multi-agent orchestration, sub-graphs, meta-graphs, advanced RAG, multi-modal RAG, and MCP integrations."
 },
 {
   role: "ML Engineer - B2",
   company: "Capgemini",
-  period: "2022",
+  location: "Bangalore, India",
+  period: "2022 – Nov 2025",
   label: "2022",
   description:
   "Led enterprise GenAI initiatives including RAISE™ platform (30K+ users), AURA NLP assistant (95% accuracy), LangGraph multi-agent workflows, and LoRA/QLoRA fine-tuning pipelines."
@@ -20,7 +22,8 @@ const experiences = [
 {
   role: "ML Engineer",
   company: "Tech Mahindra",
-  period: "2019",
+  location: "Bangalore, India",
+  period: "2019 – 2022",
   label: "2019",
   description:
   "Developed NLP chatbots, ITSM ticket classifiers with Random Forest & XGBoost, and automated ETL pipelines processing 10M+ records on AWS."
